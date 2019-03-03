@@ -1,0 +1,72 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest/globals": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": ["jsx-a11y", "react", "jest", "compat"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018
+  },
+  "settings": {
+    "import/core-modules": ["gatsby"],
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "16.5.1"
+    },
+    "propWrapperFunctions": ["forbidExtraProps"]
+  },
+  "rules": {
+    "arrow-parens": ["error", "always"],
+    "comma-dangle": ["error", "never"],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"]
+      }
+    ],
+    "linebreak-style": 0,
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "no-unused-vars": 0,
+    "react/require-default-props": 0,
+    "react/forbid-prop-types": 0,
+    "react/no-unused-prop-types": 1,
+    "react/prop-types": ["error", { "skipUndeclared": true }],
+    "semi": ["error", "always"],
+    "jsx-a11y/label-has-for": 0,
+    "react/jsx-boolean-value": 0,
+    "import/prefer-default-export": 0
+  }
+}
